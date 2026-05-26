@@ -15,10 +15,22 @@ Planet::Planet(sf::Vector2f position, sf::Vector2f velocity, float mass, float r
 }
 
 void Planet::update(float dt) {
+    velocity += acceleration * dt;
     shape.move(velocity * dt);
+
+    trail.push_back(shape.getPosition());
+    if (trail.size() > maxTrailLength)
+        trail.pop_front();
 }
 
 void Planet::draw(sf::RenderWindow& window) {
+    for (int i = 0; i < trail.size(); i++) {
+        sf::CircleShape dot(2.f);
+        dot.setPosition(trail[i]);
+        float alpha = (float)i / trail.size() * 255.f;
+        dot.setFillColor(sf::Color(255, 255, 255, (sf::Uint8)alpha));
+        window.draw(dot);
+    }
     window.draw(shape);
 }
 
