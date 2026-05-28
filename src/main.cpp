@@ -23,7 +23,7 @@ int main() {
                 if (spawnClock.getElapsedTime().asSeconds() > 0.3f) {
                     sf::Vector2f pos(event.mouseButton.x, event.mouseButton.y);
                     // manager.addPlanet(Planet(pos, {0.f, 50.f}, 1.f, 8.f));
-                    manager.addPlanet(Planet(pos, {0.f, 50.f}, 500.f, 8.f));
+                    manager.addPlanet(Planet(pos, {0.f, 0.f}, 10.f, 10.f));
                     spawnClock.restart();
                 }
             }
