@@ -6,8 +6,8 @@ int main() {
     window.setFramerateLimit(60);
 
     PlanetManager manager;
-    manager.addPlanet(Planet({400, 300}, {0.f, 0.f}, 10000.f, 30.f, sf::Color::Yellow));
-    manager.addPlanet(Planet({550, 300}, {0.f, 183.f}, 1.f, 10.f, sf::Color::Black));
+    // manager.addPlanet(Planet({400, 300}, {0.f, 0.f}, 10000.f, 30.f, sf::Color::Yellow));
+    // manager.addPlanet(Planet({550, 300}, {0.f, 183.f}, 1.f, 15.f, sf::Color::Black));
 
     sf::Font font;
     font.loadFromFile("../SpicyRice-Regular.ttf");
