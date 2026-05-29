@@ -6,12 +6,12 @@
 
 #include "Planet.h"
 
-Planet::Planet(sf::Vector2f position, sf::Vector2f velocity, float mass, float radius)
+Planet::Planet(sf::Vector2f position, sf::Vector2f velocity, float mass, float radius, sf::Color color)
     : velocity(velocity), mass(mass) {
     shape.setRadius(radius);
     shape.setOrigin(radius, radius);
     shape.setPosition(position);
-    shape.setFillColor(sf::Color::White);
+    shape.setFillColor(color);
 }
 
 void Planet::update(float dt) {

@@ -12,7 +12,7 @@ public:
     float mass;
     sf::Vector2f acceleration;
 
-    Planet(sf::Vector2f position, sf::Vector2f velocity, float mass, float radius);
+    Planet(sf::Vector2f position, sf::Vector2f velocity, float mass, float radius, sf::Color color);
     void update(float dt);
     void draw(sf::RenderWindow& window);
     sf::Vector2f getPosition();
